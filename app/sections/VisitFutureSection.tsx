@@ -2,18 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
-import PlaceholderImage from '../components/PlaceholderImage';
+
 
 export default function VisitFutureSection() {
     return (
         <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-            {/* Background Image with Placeholder */}
-            <div className="absolute inset-0">
-                <PlaceholderImage
-                    variant="campus"
-                    className="w-full h-full"
-                />
-            </div>
+            {/* Background Image */}
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/visit-future.jpg')" }}
+            />
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-primary-dark/85" />

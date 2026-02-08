@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import PlaceholderImage from '../components/PlaceholderImage';
+
 
 const stats = [
     { value: '15+', label: 'Years of Excellence' },
@@ -97,10 +97,9 @@ export default function HeroSection() {
 
                             {/* Primary Image */}
                             <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden aspect-[4/5] shadow-2xl">
-                                <PlaceholderImage
-                                    variant="hero"
-                                    text="Campus"
-                                    className="absolute inset-0"
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center"
+                                    style={{ backgroundImage: "url('/images/hero-campus.jpg')" }}
                                 />
 
                                 {/* Overlay Gradient */}

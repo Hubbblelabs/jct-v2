@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import CollegeCard from '../components/CollegeCard';
-import PlaceholderImage from '../components/PlaceholderImage';
+
 
 const colleges = [
     {
@@ -97,10 +97,9 @@ export default function AboutSection() {
                             {/* Large Image */}
                             <div className="col-span-7 row-span-2">
                                 <div className="aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden shadow-xl relative group">
-                                    <PlaceholderImage
-                                        variant="campus"
-                                        text="Campus"
-                                        className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+                                    <div
+                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                        style={{ backgroundImage: "url('/images/about-campus.jpg')" }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent" />
                                 </div>
@@ -117,10 +116,9 @@ export default function AboutSection() {
                             {/* Small Image */}
                             <div className="col-span-5">
                                 <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden shadow-lg relative group">
-                                    <PlaceholderImage
-                                        variant="students"
-                                        text="Students"
-                                        className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+                                    <div
+                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                        style={{ backgroundImage: "url('/images/about-students.jpg')" }}
                                     />
                                 </div>
                             </div>
