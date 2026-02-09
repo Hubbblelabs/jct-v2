@@ -50,8 +50,8 @@ export default function Header() {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2'
-                : 'bg-white py-3'
+            ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2'
+            : 'bg-white py-3'
             }`}>
             <div className="container">
                 <div className="flex items-center justify-between">
@@ -149,7 +149,7 @@ export default function Header() {
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden mt-4 py-4 border-t border-neutral-100">
+                    <div className="lg:hidden mt-4 py-4 border-t border-neutral-100 max-h-[85vh] overflow-y-auto">
                         <div className="space-y-2">
                             {colleges.map((college) => (
                                 <Link

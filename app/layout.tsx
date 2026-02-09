@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FloatingActions from "./components/FloatingActions";
 
 export const metadata: Metadata = {
   title: "JCT Institutions | Career-Oriented Technical Education in Coimbatore",
@@ -28,8 +29,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-inter overflow-x-hidden">
         {children}
+        <FloatingActions />
       </body>
     </html>
   );

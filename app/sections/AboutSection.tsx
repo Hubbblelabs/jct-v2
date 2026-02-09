@@ -62,7 +62,7 @@ export default function AboutSection() {
                 {/* Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 md:mb-20">
                     {/* Left Content */}
-                    <div className="order-2 lg:order-1">
+                    <div className="lg:order-1">
                         <p className="text-neutral-600 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
                             Since 2008, our commitment to academic excellence, industry-relevant curriculum,
                             and holistic development has made us a trusted name in higher education.
@@ -95,11 +95,11 @@ export default function AboutSection() {
                     </div>
 
                     {/* Right - Image Bento Grid */}
-                    <div className="relative order-1 lg:order-2">
-                        <div className="grid grid-cols-12 gap-3 md:gap-4">
+                    <div className="relative lg:order-2">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-4">
                             {/* Large Image */}
-                            <div className="col-span-7 row-span-2">
-                                <div className="aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden shadow-xl relative group">
+                            <div className="lg:col-span-7 lg:row-span-2">
+                                <div className="aspect-video lg:aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden shadow-xl relative group">
                                     <div
                                         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                         style={{ backgroundImage: "url('/images/about-campus.jpg')" }}
@@ -109,16 +109,16 @@ export default function AboutSection() {
                             </div>
 
                             {/* Stats Card */}
-                            <div className="col-span-5">
-                                <div className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-accent to-accent-light p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-lg">
-                                    <div className="text-3xl md:text-5xl font-bold text-primary-dark mb-1">15+</div>
-                                    <div className="text-xs md:text-sm text-primary-dark/80 font-medium">Years of<br />Excellence</div>
+                            <div className="lg:col-span-5">
+                                <div className="aspect-auto lg:aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-accent to-accent-light p-6 flex flex-row lg:flex-col items-center justify-center text-center shadow-lg gap-4 lg:gap-0">
+                                    <div className="text-4xl md:text-5xl font-bold text-primary-dark mb-0 lg:mb-1">15+</div>
+                                    <div className="text-sm text-primary-dark/80 font-medium text-left lg:text-center">Years of<br className="hidden lg:block" /> Excellence</div>
                                 </div>
                             </div>
 
                             {/* Small Image */}
-                            <div className="col-span-5">
-                                <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden shadow-lg relative group">
+                            <div className="lg:col-span-5">
+                                <div className="aspect-video lg:aspect-square rounded-xl md:rounded-2xl overflow-hidden shadow-lg relative group">
                                     <div
                                         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                         style={{ backgroundImage: "url('/images/about-students.jpg')" }}
@@ -128,12 +128,12 @@ export default function AboutSection() {
                         </div>
 
                         {/* Floating Badge */}
-                        <div className="absolute -bottom-4 md:-bottom-6 -left-2 md:-left-6 bg-white rounded-lg md:rounded-xl shadow-xl p-3 md:p-4 animate-float">
-                            <div className="flex items-center gap-2 md:gap-3">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-tertiary/10 flex items-center justify-center">
+                        <div className="relative mt-6 lg:mt-0 lg:absolute lg:-bottom-6 lg:-left-6 bg-white rounded-lg md:rounded-xl shadow-xl p-3 md:p-4 animate-float z-10 w-full md:w-auto">
+                            <div className="flex items-center gap-3 justify-center md:justify-start">
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-tertiary/10 flex items-center justify-center shrink-0">
                                     <GraduationIcon />
                                 </div>
-                                <div>
+                                <div className="text-left">
                                     <div className="text-xl md:text-2xl font-bold text-primary">7000+</div>
                                     <div className="text-[10px] md:text-xs text-neutral-500">Successful Graduates</div>
                                 </div>
@@ -141,7 +141,7 @@ export default function AboutSection() {
                         </div>
 
                         {/* Decorative Element */}
-                        <div className="absolute -z-10 -bottom-8 -right-8 w-32 md:w-48 h-32 md:h-48 bg-secondary/5 rounded-full blur-2xl" />
+                        <div className="absolute -z-10 -bottom-8 -right-8 w-32 md:w-48 h-32 md:h-48 bg-secondary/5 rounded-full blur-2xl block md:block" />
                     </div>
                 </div>
 

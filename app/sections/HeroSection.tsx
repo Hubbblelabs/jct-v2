@@ -13,7 +13,7 @@ const stats = [
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
             {/* Background Image with Zoom Effect */}
             <div className="absolute inset-0 z-0">
                 <div
@@ -26,7 +26,7 @@ export default function HeroSection() {
             </div>
 
             {/* Content Container */}
-            <div className="container relative z-10 pt-20 pb-32 flex flex-col items-center text-center">
+            <div className="container relative z-10 flex-grow flex flex-col items-center justify-center text-center pt-24 pb-12">
 
                 {/* Eyebrow Tag */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-white/10 mb-8 animate-fade-in-up">
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="max-w-5xl mx-auto text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 animate-fade-in-up delay-100">
+                <h1 className="max-w-5xl mx-auto text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 animate-fade-in-up delay-100">
                     <span className="!text-white drop-shadow-lg">Shape Your Future at</span>
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70 drop-shadow-lg">
@@ -74,7 +74,7 @@ export default function HeroSection() {
             </div>
 
             {/* Glass Stats Bar */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-neutral-950/40 backdrop-blur-xl animate-fade-in-up delay-500">
+            <div className="relative z-20 w-full border-t border-white/10 bg-neutral-950/40 backdrop-blur-xl animate-fade-in-up delay-500 mt-auto">
                 <div className="container">
                     <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
                         {stats.map((stat, index) => (
