@@ -14,7 +14,7 @@ export default function VisitFutureSection() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-primary-dark/85" />
+            <div className="absolute inset-0 bg-primary-dark/90" />
 
             {/* Decorative Elements */}
             <div className="absolute inset-0 decoration-dots opacity-10" />
@@ -36,7 +36,7 @@ export default function VisitFutureSection() {
                     </h2>
 
                     {/* Description */}
-                    <p className="text-base md:text-lg lg:text-xl text-white/70 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
+                    <p className="text-base md:text-lg lg:text-xl text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
                         Take the first step towards a bright future. Schedule a campus visit
                         or apply online to join our community of achievers.
                     </p>
@@ -61,32 +61,32 @@ export default function VisitFutureSection() {
 
                     {/* Quick Info Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-3xl mx-auto px-4">
-                        <a href="tel:+914222345678" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 md:p-5 hover:bg-white/10 transition-colors">
+                        <a href="tel:+914222345678" className="group bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-xl p-4 md:p-5 hover:bg-white/[0.12] transition-colors shadow-lg">
                             <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                                 <PhoneIcon />
                             </div>
                             <h4 className="font-semibold mb-1 text-sm md:text-base text-accent-color">Call Us</h4>
-                            <span className="text-white/70 text-xs md:text-sm hover:text-accent transition-colors">
+                            <span className="text-white/80 text-xs md:text-sm hover:text-accent transition-colors">
                                 +91 422 234 5678
                             </span>
                         </a>
 
-                        <a href="mailto:admissions@jct.edu.in" className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 md:p-5 hover:bg-white/10 transition-colors">
+                        <a href="mailto:admissions@jct.edu.in" className="group bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-xl p-4 md:p-5 hover:bg-white/[0.12] transition-colors shadow-lg">
                             <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                                 <EmailIcon />
                             </div>
                             <h4 className="font-semibold mb-1 text-sm md:text-base text-accent-color">Email Us</h4>
-                            <span className="text-white/70 text-xs md:text-sm hover:text-accent transition-colors">
+                            <span className="text-white/80 text-xs md:text-sm hover:text-accent transition-colors">
                                 admissions@jct.edu.in
                             </span>
                         </a>
 
-                        <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 md:p-5 hover:bg-white/10 transition-colors">
+                        <div className="group bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-xl p-4 md:p-5 hover:bg-white/[0.12] transition-colors shadow-lg">
                             <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                                 <LocationIcon />
                             </div>
                             <h4 className="font-semibold mb-1 text-sm md:text-base text-accent-color">Visit Us</h4>
-                            <span className="text-white/70 text-xs md:text-sm">
+                            <span className="text-white/80 text-xs md:text-sm">
                                 Coimbatore, Tamil Nadu
                             </span>
                         </div>

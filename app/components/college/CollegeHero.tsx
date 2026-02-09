@@ -62,7 +62,7 @@ export default function CollegeHero({
                         )}
 
                         {/* Title */}
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#ffffff' }}>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 !text-white">
                             {shortName}
                         </h1>
 
@@ -70,7 +70,7 @@ export default function CollegeHero({
                         <p className="text-xl text-accent-color font-medium mb-4">{tagline}</p>
 
                         {/* Description */}
-                        <p className="text-lg text-white/70 mb-8 max-w-xl">{description}</p>
+                        <p className="text-lg !text-white/70 mb-8 max-w-xl">{description}</p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 mb-10">

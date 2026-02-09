@@ -40,7 +40,7 @@ export default function DepartmentGrid({
                         <span className="w-2 h-2 bg-accent rounded-full" />
                         <span className="text-white/80 text-sm font-medium">Programs</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold !text-white mb-4">
                         {title.split(' ').map((word, i) =>
                             i === 0 ? <span key={i} className="text-gradient">{word} </span> : word + ' '
                         )}
@@ -54,7 +54,7 @@ export default function DepartmentGrid({
                         <Link
                             key={dept.code}
                             href={dept.href}
-                            className="group relative p-6 md:p-8 bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 hover:border-accent/50 overflow-hidden transition-all duration-500"
+                            className="group relative p-6 md:p-8 bg-white/[0.07] backdrop-blur-sm rounded-2xl border border-white/15 hover:border-accent/50 overflow-hidden transition-all duration-500 shadow-lg hover:shadow-xl"
                             style={{ animationDelay: `${index * 50}ms` }}
                         >
                             {/* Background Image */}
@@ -66,7 +66,7 @@ export default function DepartmentGrid({
                             )}
 
                             {/* Hover Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                             <div className="relative z-10">
                                 {/* Icon */}
@@ -76,15 +76,15 @@ export default function DepartmentGrid({
 
                                 {/* Content */}
                                 <div className="flex items-start gap-3 mb-3">
-                                    <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                                    <h3 className="text-lg font-semibold !text-white group-hover:text-accent transition-colors">
                                         {dept.name}
                                     </h3>
-                                    <span className="px-2 py-0.5 rounded-md bg-accent/20 text-accent text-xs font-medium shrink-0">
+                                    <span className="px-2 py-0.5 rounded-md bg-accent/20 !text-accent text-xs font-medium shrink-0">
                                         {dept.code}
                                     </span>
                                 </div>
 
-                                <p className="text-white/60 text-sm leading-relaxed line-clamp-2 mb-5">
+                                <p className="text-white/70 text-sm leading-relaxed line-clamp-2 mb-5">
                                     {dept.description}
                                 </p>
 

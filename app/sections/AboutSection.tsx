@@ -12,6 +12,7 @@ const colleges = [
         icon: <EngineeringIcon />,
         tag: 'Autonomous',
         stats: { students: '2500+', programs: '8', placement: '100%' },
+        image: '/images/engineering-campus.jpg',
     },
     {
         name: 'JCT College of Arts & Science',
@@ -20,6 +21,7 @@ const colleges = [
         href: '/colleges/arts-science',
         icon: <BookIcon />,
         stats: { students: '1800+', programs: '12', placement: '95%' },
+        image: '/images/arts-campus.jpg',
     },
     {
         name: 'JCT Polytechnic College',
@@ -28,6 +30,7 @@ const colleges = [
         href: '/colleges/polytechnic',
         icon: <GearIcon />,
         stats: { students: '1200+', programs: '6', placement: '98%' },
+        image: '/images/polytechnic-campus.jpg',
     },
 ];
 

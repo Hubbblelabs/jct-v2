@@ -73,12 +73,12 @@ export default function StatsCounter({
             label: 'text-neutral-500',
         },
         light: {
-            value: 'text-white',
-            label: 'text-white/70',
+            value: '!text-white',
+            label: '!text-white/70',
         },
         accent: {
-            value: 'text-accent',
-            label: 'text-white/70',
+            value: '!text-accent',
+            label: '!text-white/70',
         },
     };
 

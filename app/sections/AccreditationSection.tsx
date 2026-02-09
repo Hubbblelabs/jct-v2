@@ -36,10 +36,10 @@ export default function AccreditationSection() {
                     <div className="section-eyebrow justify-center">
                         <span>Recognition</span>
                     </div>
-                    <h2 className="section-title text-white">
+                    <h2 className="section-title !text-white">
                         Accreditations & <span className="text-gradient">Affiliations</span>
                     </h2>
-                    <p className="section-subtitle mx-auto text-white/70">
+                    <p className="section-subtitle mx-auto !text-white/70">
                         Our commitment to quality education is recognized by national accreditation bodies
                     </p>
                 </div>
@@ -55,8 +55,8 @@ export default function AccreditationSection() {
                             <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                 <span className="text-xl font-bold text-primary-dark">{accreditation.grade}</span>
                             </div>
-                            <h4 className="text-xl font-bold text-white mb-2">{accreditation.name}</h4>
-                            <p className="text-white/60 text-sm">{accreditation.description}</p>
+                            <h4 className="text-xl font-bold !text-white mb-2">{accreditation.name}</h4>
+                            <p className="!text-white/60 text-sm">{accreditation.description}</p>
                         </div>
                     ))}
                 </div>
@@ -72,7 +72,7 @@ export default function AccreditationSection() {
                                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                                     {achievement.value}
                                 </div>
-                                <div className="text-white/70 text-sm">{achievement.label}</div>
+                                <div className="!text-white/70 text-sm">{achievement.label}</div>
                             </div>
                         ))}
                     </div>
@@ -80,7 +80,7 @@ export default function AccreditationSection() {
 
                 {/* Affiliated Universities */}
                 <div className="text-center">
-                    <h3 className="text-xl font-semibold text-white mb-8">Affiliated With</h3>
+                    <h3 className="text-xl font-semibold !text-white mb-8">Affiliated With</h3>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
                         {affiliations.map((affiliation) => (
                             <div
@@ -88,9 +88,9 @@ export default function AccreditationSection() {
                                 className="group flex flex-col items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
                             >
                                 <div className="w-20 h-20 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                                    <span className="text-2xl font-bold text-white">{affiliation.name.charAt(0)}</span>
+                                    <span className="text-2xl font-bold !text-white">{affiliation.name.charAt(0)}</span>
                                 </div>
-                                <span className="text-white/80 text-sm font-medium">{affiliation.name}</span>
+                                <span className="!text-white/80 text-sm font-medium">{affiliation.name}</span>
                             </div>
                         ))}
                     </div>

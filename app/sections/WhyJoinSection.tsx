@@ -84,10 +84,10 @@ export default function WhyJoinSection() {
 
                     <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="text-center md:text-left">
-                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                            <h3 className="text-2xl md:text-3xl font-bold !text-white mb-2">
                                 Ready to Shape Your Future?
                             </h3>
-                            <p className="text-white/70">
+                            <p className="!text-white/70">
                                 Join thousands of successful graduates who started their journey here.
                             </p>
                         </div>

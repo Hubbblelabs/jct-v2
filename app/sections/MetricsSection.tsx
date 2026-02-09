@@ -34,7 +34,7 @@ export default function MetricsSection() {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-4">
                         Numbers That <span className="text-gradient">Speak</span>
                     </h2>
-                    <p className="text-white/70">
+                    <p className="!text-white/70">
                         Our track record of excellence reflected in the success of our students
                     </p>
                 </div>

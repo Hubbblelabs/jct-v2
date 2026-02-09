@@ -74,7 +74,7 @@ export default function FacilitiesGallery({
                                             </div>
                                         )}
                                         <div>
-                                            <h3 className="text-lg md:text-xl font-semibold text-white mb-1 group-hover:text-accent transition-colors">
+                                            <h3 className="text-lg md:text-xl font-semibold !text-white mb-1 group-hover:text-accent transition-colors">
                                                 {facility.name}
                                             </h3>
                                             <p className="text-white/70 text-sm leading-relaxed line-clamp-2">

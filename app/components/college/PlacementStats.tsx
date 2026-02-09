@@ -102,7 +102,7 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
                         <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                         <span className="text-white/80 text-sm font-medium">Career Success</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold !text-white mb-4">
                         Placement <span className="text-gradient">Highlights</span>
                     </h2>
                     <p className="text-white/60 text-lg">

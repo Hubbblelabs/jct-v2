@@ -59,7 +59,7 @@ export default function CollegeCard({
 
                 {/* Title on Image */}
                 <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-1">{shortName}</h3>
+                    <h3 className="text-xl font-bold !text-white mb-1">{shortName}</h3>
                     <p className="text-white/80 text-sm line-clamp-1">{name}</p>
                 </div>
             </div>

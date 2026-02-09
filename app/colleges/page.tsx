@@ -16,6 +16,7 @@ const colleges = [
         icon: <EngineeringIcon />,
         tag: 'Autonomous',
         stats: { students: '2500+', programs: '8', placement: '100%' },
+        image: '/images/engineering-campus.jpg',
     },
     {
         name: 'JCT College of Arts & Science',
@@ -24,6 +25,7 @@ const colleges = [
         href: '/colleges/arts-science',
         icon: <BookIcon />,
         stats: { students: '1800+', programs: '12', placement: '95%' },
+        image: '/images/arts-campus.jpg',
     },
     {
         name: 'JCT Polytechnic College',
@@ -32,6 +34,7 @@ const colleges = [
         href: '/colleges/polytechnic',
         icon: <GearIcon />,
         stats: { students: '1200+', programs: '6', placement: '98%' },
+        image: '/images/polytechnic-campus.jpg',
     },
 ];
 
@@ -52,10 +55,10 @@ export default function CollegesPage() {
                     </nav>
 
                     <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold !text-white mb-6">
                             Our <span className="text-gradient">Colleges</span>
                         </h1>
-                        <p className="text-xl text-white/70 leading-relaxed">
+                        <p className="text-xl !text-white/70 leading-relaxed">
                             Explore our three flagship institutions, each offering unique programs
                             designed to prepare students for successful careers.
                         </p>
