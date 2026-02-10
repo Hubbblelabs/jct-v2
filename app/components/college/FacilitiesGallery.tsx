@@ -38,7 +38,7 @@ export default function FacilitiesGallery({
                     </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
                         {title.split(' ').slice(0, -1).join(' ')}{' '}
-                        <span className="text-gradient">{title.split(' ').slice(-1)[0]}</span>
+                        <span className="text-primary">{title.split(' ').slice(-1)[0]}</span>
                     </h2>
                     <p className="text-neutral-600 text-lg">{subtitle}</p>
                 </div>

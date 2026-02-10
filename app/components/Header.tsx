@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+
 const colleges = [
     {
         name: 'JCT College of Engineering & Technology',
@@ -36,6 +39,10 @@ const quickLinks = [
 ];
 
 export default function Header() {
+    const pathname = usePathname();
+    const isEngineering = pathname?.startsWith('/colleges/engineering');
+    const isArtsScience = pathname?.startsWith('/colleges/arts-science');
+    const isPolytechnic = pathname?.startsWith('/colleges/polytechnic');
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isCollegesOpen, setIsCollegesOpen] = useState(false);
@@ -49,19 +56,31 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2'
-            : 'bg-white py-3'
-            }`}>
+        <header
+            data-theme={isArtsScience ? 'arts-science' : isPolytechnic ? 'polytechnic' : undefined}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2'
+                : 'bg-white py-3'
+                }`}>
             <div className="container">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                            <span className="text-white font-bold text-xl">JCT</span>
+                        <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+                            <Image
+                                src="/jct_logo.svg"
+                                alt="JCT Logo"
+                                width={190}
+                                height={48}
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                         <div className="hidden sm:block">
-                            <div className="font-bold text-primary text-lg leading-tight">JCT Institutions</div>
+                            <div className="font-bold text-primary text-lg leading-tight">
+                                {isEngineering ? 'JCT College of Engineering & Technology' :
+                                    isArtsScience ? 'JCT College of Arts & Science' :
+                                        isPolytechnic ? 'JCT Polytechnic College' : 'JCT Institutions'}
+                            </div>
                             <div className="text-xs text-neutral-500">Excellence in Education</div>
                         </div>
                     </Link>
@@ -133,7 +152,7 @@ export default function Header() {
 
                     {/* CTA & Mobile Menu */}
                     <div className="flex items-center gap-3">
-                        <Link href="/apply" className="hidden sm:inline-flex btn btn-primary">
+                        <Link href="https://admissions.jct.ac.in/" className="hidden sm:inline-flex btn btn-primary">
                             Apply Now
                         </Link>
 
@@ -182,7 +201,7 @@ export default function Header() {
                                 ))}
                             </div>
                             <div className="pt-4">
-                                <Link href="/apply" className="btn btn-primary w-full justify-center">
+                                <Link href="https://admissions.jct.ac.in/" className="btn btn-primary w-full justify-center">
                                     Apply Now
                                 </Link>
                             </div>

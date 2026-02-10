@@ -2,13 +2,15 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 
 const stats = [
     { value: '15+', label: 'Years of Excellence' },
     { value: '7000+', label: 'Graduates' },
     { value: '100%', label: 'Placement Support' },
-    { value: 'NAAC A', label: 'Accreditation' },
+    // { value: 'NAAC A', label: 'Accreditation' },
+    {value:'8000+',label:'Scholarships'}
 ];
 
 export default function HeroSection() {
@@ -16,9 +18,13 @@ export default function HeroSection() {
         <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
             {/* Background Image with Zoom Effect */}
             <div className="absolute inset-0 z-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center animate-zoom-slow"
-                    style={{ backgroundImage: "url('/images/hero-campus.jpg')" }}
+                <Image
+                    src="/images/hero-campus.jpg"
+                    alt="JCT Campus"
+                    fill
+                    priority
+                    className="object-cover animate-zoom-slow"
+                    quality={90}
                 />
                 {/* Cinema-style Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/60 to-neutral-950/90" />
@@ -47,8 +53,8 @@ export default function HeroSection() {
 
                 {/* Description */}
                 <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/80 leading-relaxed mb-10 animate-fade-in-up delay-200 text-shadow-sm">
-                    Premier technical education with NAAC &apos;A&apos; Grade accreditation.
-                    Join a legacy of excellence, innovation, and 100% placement success.
+                    Experience world-class education where innovation meets tradition.
+                    We nurture talent with industry-aligned curriculum and state-of-the-art facilities to shape tomorrow&apos;s leaders.
                 </p>
 
                 {/* CTA Buttons */}

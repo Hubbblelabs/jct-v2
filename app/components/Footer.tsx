@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const colleges = [
     { name: 'Engineering & Technology', href: '/colleges/engineering' },
@@ -35,6 +37,10 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+    const pathname = usePathname();
+    const isEngineering = pathname?.startsWith('/colleges/engineering');
+    const isArtsScience = pathname?.startsWith('/colleges/arts-science');
+    const isPolytechnic = pathname?.startsWith('/colleges/polytechnic');
     const [email, setEmail] = useState('');
 
     const handleSubscribe = (e: React.FormEvent) => {
@@ -44,7 +50,10 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-neutral-950 text-white relative overflow-hidden pt-16 md:pt-20">
+        <footer
+            data-theme={isArtsScience ? 'arts-science' : isPolytechnic ? 'polytechnic' : undefined}
+            className="bg-neutral-950 text-white relative overflow-hidden pt-16 md:pt-20"
+        >
             {/* Decorative Elements */}
             <div className="absolute inset-0 decoration-dots opacity-[0.03]" />
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -89,11 +98,21 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2 lg:col-span-2 space-y-8">
                         <div className="space-y-6">
                             <Link href="/" className="inline-flex items-center gap-3">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-light text-primary-dark font-bold text-lg shadow-lg">
-                                    JCT
+                                <div className="relative w-12 h-12 flex items-center justify-center">
+                                    <Image
+                                        src="/jct_logo.svg"
+                                        alt="JCT Logo"
+                                        width={48}
+                                        height={48}
+                                        className="w-full h-full object-contain brightness-100 invert"
+                                    />
                                 </div>
                                 <div>
-                                    <span className="block text-lg font-bold leading-tight text-white">JCT Institutions</span>
+                                    <span className="block text-lg font-bold leading-tight text-white">
+                                        {isEngineering ? 'JCT College of Engineering & Technology' :
+                                            isArtsScience ? 'JCT College of Arts & Science' :
+                                                isPolytechnic ? 'JCT Polytechnic College' : 'JCT Institutions'}
+                                    </span>
                                 </div>
                             </Link>
                             <p className="text-white/60 leading-relaxed text-sm max-w-sm">
@@ -129,11 +148,11 @@ export default function Footer() {
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="tel:+914222345678" className="flex items-center gap-3 group">
+                                    <a href="tel:+91 93614 88801" className="flex items-center gap-3 group">
                                         <div className="w-5 h-5 rounded bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
                                             <PhoneIcon className="text-accent" />
                                         </div>
-                                        <span className="text-white/70 text-sm group-hover:text-white transition-colors">+91 422 234 5678</span>
+                                        <span className="text-white/70 text-sm group-hover:text-white transition-colors">+91 93614 88801</span>
                                     </a>
                                 </li>
                                 <li>

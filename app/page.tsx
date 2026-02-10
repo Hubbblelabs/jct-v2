@@ -1,13 +1,15 @@
+import dynamic from 'next/dynamic';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
-import AccreditationSection from './sections/AccreditationSection';
-import WhyJoinSection from './sections/WhyJoinSection';
-import MetricsSection from './sections/MetricsSection';
-import VideoGallerySection from './sections/VideoGallerySection';
-import VisitFutureSection from './sections/VisitFutureSection';
+
+// Lazy load heavy sections for better performance
+const WhyJoinSection = dynamic(() => import('./sections/WhyJoinSection'), { ssr: true });
+const MetricsSection = dynamic(() => import('./sections/MetricsSection'), { ssr: true });
+const VideoGallerySection = dynamic(() => import('./sections/VideoGallerySection'), { ssr: true });
+const VisitFutureSection = dynamic(() => import('./sections/VisitFutureSection'), { ssr: true });
 
 export default function Home() {
   return (
@@ -24,7 +26,7 @@ export default function Home() {
         <AboutSection />
 
         {/* 3. Affiliations & Accreditation */}
-        <AccreditationSection />
+        {/* <AccreditationSection /> */}
 
         {/* 4. Why Join JCT? */}
         <WhyJoinSection />

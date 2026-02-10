@@ -44,7 +44,7 @@ export default function VisitFutureSection() {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4">
                         <Link
-                            href="/apply"
+                            href="https://admissions.jct.ac.in/"
                             className="w-full sm:w-auto btn btn-primary btn-lg animate-pulse-glow justify-center"
                         >
                             Apply Now
@@ -61,13 +61,13 @@ export default function VisitFutureSection() {
 
                     {/* Quick Info Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-3xl mx-auto px-4">
-                        <a href="tel:+914222345678" className="group bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-xl p-4 md:p-5 hover:bg-white/[0.12] transition-colors shadow-lg">
+                        <a href="tel:+91 93614 88801" className="group bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-xl p-4 md:p-5 hover:bg-white/[0.12] transition-colors shadow-lg">
                             <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                                 <PhoneIcon />
                             </div>
                             <h4 className="font-semibold mb-1 text-sm md:text-base text-accent-color">Call Us</h4>
                             <span className="text-white/80 text-xs md:text-sm hover:text-accent transition-colors">
-                                +91 422 234 5678
+                                +91 93614 88801
                             </span>
                         </a>
 

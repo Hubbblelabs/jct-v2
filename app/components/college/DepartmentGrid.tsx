@@ -25,7 +25,7 @@ export default function DepartmentGrid({
     subtitle = "Explore our academic departments"
 }: DepartmentGridProps) {
     return (
-        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark to-[#0a1628] overflow-hidden" id="programs">
+        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark to-neutral-950 overflow-hidden" id="programs">
             {/* Decorative Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 decoration-dots opacity-[0.03]" />

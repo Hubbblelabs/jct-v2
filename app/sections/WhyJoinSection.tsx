@@ -47,7 +47,7 @@ export default function WhyJoinSection() {
                             <span>Why Choose Us</span>
                         </div>
                         <h2 className="section-title">
-                            Why Join <span className="text-gradient">JCT</span>?
+                            Why Join <span className="text-gradient">JCT </span>?
                         </h2>
                         <p className="section-subtitle">
                             Discover what makes JCT Institutions the perfect choice for your educational journey.
@@ -92,7 +92,7 @@ export default function WhyJoinSection() {
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4">
-                            <a href="/apply" className="btn btn-primary">
+                            <a href="https://admissions.jct.ac.in/" className="btn btn-primary">
                                 Apply Now
                             </a>
                             <a href="/contact" className="btn btn-ghost">

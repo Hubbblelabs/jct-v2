@@ -13,7 +13,7 @@ export default function FloatingActions() {
             <div className="fixed bottom-6 left-6 z-40">
                 {/* WhatsApp Button - Bottom Left */}
                 <a
-                    href="https://wa.me/919876543210" // Replace with actual number
+                    href="https://wa.me/919361488801" // Replace with actual number
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/40 cursor-pointer"

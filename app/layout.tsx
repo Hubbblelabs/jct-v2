@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Inter, Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
 import FloatingActions from "./components/FloatingActions";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+});
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "JCT Institutions | Career-Oriented Technical Education in Coimbatore",
@@ -20,16 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="antialiased font-inter overflow-x-hidden">
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${dmSans.variable}`}>
+      <body className="antialiased font-body overflow-x-hidden">
         {children}
         <FloatingActions />
       </body>

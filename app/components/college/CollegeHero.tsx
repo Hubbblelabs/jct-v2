@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CollegeHeroProps {
     name: string;
@@ -21,7 +22,7 @@ export default function CollegeHero({
     stats,
 }: CollegeHeroProps) {
     return (
-        <section className="relative min-h-[70vh] flex items-center bg-gradient-hero overflow-hidden">
+        <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-center bg-gradient-hero overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 decoration-grid" />
@@ -32,15 +33,19 @@ export default function CollegeHero({
             {/* Background Image */}
             {image && (
                 <>
-                    <div
-                        className="absolute inset-0 bg-cover bg-center opacity-20"
-                        style={{ backgroundImage: `url('${image}')` }}
+                    <Image
+                        src={image}
+                        alt={name}
+                        fill
+                        priority
+                        className="object-cover object-center opacity-40"
+                        quality={90}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/90 to-primary-dark/70" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/80 via-primary-dark/70 to-primary/75" />
                 </>
             )}
 
-            <div className="container relative z-10 py-24">
+            <div className="container relative z-10 py-20 md:py-24 lg:py-32">
                 {/* Breadcrumb */}
                 <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
                     <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -62,19 +67,19 @@ export default function CollegeHero({
                         )}
 
                         {/* Title */}
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 !text-white">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 !text-white leading-tight">
                             {shortName}
                         </h1>
 
                         {/* Tagline */}
-                        <p className="text-xl text-accent-color font-medium mb-4">{tagline}</p>
+                        <p className="text-xl md:text-2xl text-accent font-medium mb-6">{tagline}</p>
 
                         {/* Description */}
-                        <p className="text-lg !text-white/70 mb-8 max-w-xl">{description}</p>
+                        <p className="text-base md:text-lg !text-white/80 mb-8 max-w-xl leading-relaxed">{description}</p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 mb-10">
-                            <Link href="/apply" className="btn btn-primary">
+                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
                                 Apply Now
                             </Link>
                             <Link href="#programs" className="btn btn-ghost">

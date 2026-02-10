@@ -76,18 +76,6 @@ export default function AboutSection() {
                             industry-ready professionals.
                         </p>
 
-                        {/* Key Points */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
-                            {keyPoints.map((point) => (
-                                <div key={point} className="flex items-center gap-3 group">
-                                    <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
-                                        <CheckIcon />
-                                    </div>
-                                    <span className="text-neutral-700 font-medium text-sm md:text-base">{point}</span>
-                                </div>
-                            ))}
-                        </div>
-
                         <Link href="/about" className="btn btn-primary">
                             Learn More About Us
                             <ArrowIcon />

@@ -94,7 +94,7 @@ export default function CollegesPage() {
                             Choose your path and take the first step towards a successful career.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/apply" className="btn btn-primary">
+                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
                                 Apply Now
                             </Link>
                             <Link href="/contact" className="btn btn-outline">

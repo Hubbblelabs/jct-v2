@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import VideoModal from '../components/VideoModal';
 
 const videos = [
     {
         id: 1,
         title: 'Campus Tour',
-        thumbnail: '/images/video-campus.jpg',
+        thumbnail: '/images/hero-campus.jpg',
         videoUrl: 'https://www.youtube.com/embed/RBzA0cneWRA',
         duration: '3:45',
         category: 'Campus',
@@ -15,7 +16,7 @@ const videos = [
     {
         id: 2,
         title: 'Student Life at JCT',
-        thumbnail: '/images/video-students.jpg',
+        thumbnail: '/images/about-students.jpg',
         videoUrl: 'https://www.youtube.com/embed/RBzA0cneWRA',
         duration: '4:20',
         category: 'Students',
@@ -23,7 +24,7 @@ const videos = [
     {
         id: 3,
         title: 'Placement Success Stories',
-        thumbnail: '/images/video-placements.jpg',
+        thumbnail: '/images/facility-seminar.jpg',
         videoUrl: 'https://www.youtube.com/embed/RBzA0cneWRA',
         duration: '5:15',
         category: 'Placements',
@@ -31,7 +32,7 @@ const videos = [
     {
         id: 4,
         title: 'Research & Innovation',
-        thumbnail: '/images/video-research.jpg',
+        thumbnail: '/images/facility-innovation.jpg',
         videoUrl: 'https://www.youtube.com/embed/RBzA0cneWRA',
         duration: '4:00',
         category: 'Research',
@@ -72,8 +73,8 @@ export default function VideoGallerySection() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === cat
-                                        ? 'bg-primary text-white shadow-md'
-                                        : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
+                                    ? 'bg-primary text-white shadow-md'
+                                    : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
                                     }`}
                             >
                                 {cat}
@@ -92,9 +93,12 @@ export default function VideoGallerySection() {
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Thumbnail */}
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                style={{ backgroundImage: `url('${video.thumbnail}')` }}
+                            <Image
+                                src={video.thumbnail}
+                                alt={video.title}
+                                fill
+                                className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                             />
 
                             {/* Fallback Gradient */}

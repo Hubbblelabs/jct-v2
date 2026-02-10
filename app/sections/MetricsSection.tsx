@@ -67,7 +67,7 @@ export default function MetricsSection() {
                     <p className="text-white/60 mb-4">
                         Be part of our success story
                     </p>
-                    <a href="/apply" className="btn btn-primary">
+                    <a href="https://admissions.jct.ac.in/" className="btn btn-primary">
                         Start Your Journey
                         <ArrowIcon />
                     </a>

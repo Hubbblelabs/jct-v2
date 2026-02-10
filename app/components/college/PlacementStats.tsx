@@ -87,7 +87,7 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
     const companies = useCountUp(companiesNum, 2000);
 
     return (
-        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark via-[#0a1628] to-primary-dark overflow-hidden" id="placements">
+        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark via-neutral-900 to-primary-dark overflow-hidden" id="placements">
             {/* Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 decoration-dots opacity-[0.03]" />
@@ -111,7 +111,7 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
                     <div ref={placement.ref} className="group bg-gradient-to-br from-accent/20 to-accent/5 backdrop-blur-sm border border-accent/30 rounded-2xl p-6 md:p-8 text-center hover:border-accent/50 transition-all duration-300">
                         <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                             {placement.count}{getStatSuffix(stats.placementRate)}
@@ -140,19 +140,38 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
 
                 {/* Recruiters */}
                 <div className="text-center">
-                    <h3 className="text-lg font-semibold text-white mb-8">Our Top Recruiters</h3>
+                    <h3 className="text-lg font-semibold text-gradient mb-8">Our Top Recruiters</h3>
                     <div className="relative overflow-hidden">
                         {/* Gradient Masks */}
                         <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-primary-dark to-transparent z-10" />
                         <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-primary-dark to-transparent z-10" />
 
-                        {/* Recruiter Logos - Marquee Effect */}
-                        <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
+                        {/* Recruiter Logos - Infinite Marquee */}
+                        <div className="flex animate-marquee hover:pause-animation">
+                            {/* First set */}
                             {recruiters.map((recruiter, index) => (
                                 <div
-                                    key={recruiter.name}
-                                    className="group w-28 md:w-32 h-16 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-                                    style={{ animationDelay: `${index * 100}ms` }}
+                                    key={`first-${recruiter.name}-${index}`}
+                                    className="group flex-shrink-0 w-32 md:w-40 h-16 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 mx-3"
+                                >
+                                    {recruiter.logo ? (
+                                        <img
+                                            src={recruiter.logo}
+                                            alt={recruiter.name}
+                                            className="max-w-full max-h-full p-3 opacity-70 group-hover:opacity-100 transition-opacity"
+                                        />
+                                    ) : (
+                                        <span className="text-white/70 text-sm font-medium text-center px-3 group-hover:text-white transition-colors">
+                                            {recruiter.name}
+                                        </span>
+                                    )}
+                                </div>
+                            ))}
+                            {/* Duplicate set for seamless loop */}
+                            {recruiters.map((recruiter, index) => (
+                                <div
+                                    key={`second-${recruiter.name}-${index}`}
+                                    className="group flex-shrink-0 w-32 md:w-40 h-16 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 mx-3"
                                 >
                                     {recruiter.logo ? (
                                         <img
