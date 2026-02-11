@@ -8,6 +8,7 @@ import AboutSection from './sections/AboutSection';
 // Lazy load heavy sections for better performance
 const WhyJoinSection = dynamic(() => import('./sections/WhyJoinSection'), { ssr: true });
 const MetricsSection = dynamic(() => import('./sections/MetricsSection'), { ssr: true });
+const RecruitersSection = dynamic(() => import('./sections/RecruitersSection'), { ssr: true });
 const VideoGallerySection = dynamic(() => import('./sections/VideoGallerySection'), { ssr: true });
 const VisitFutureSection = dynamic(() => import('./sections/VisitFutureSection'), { ssr: true });
 
@@ -34,8 +35,11 @@ export default function Home() {
         {/* 5. Key Metrics (Counters) */}
         <MetricsSection />
 
+        {/* 5.5. Recruiters Carousel */}
+
         {/* 6. Video Gallery */}
         <VideoGallerySection />
+        <RecruitersSection />
 
         {/* 7. Visit Your Future CTA */}
         <VisitFutureSection />

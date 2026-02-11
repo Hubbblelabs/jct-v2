@@ -182,8 +182,8 @@ export default function EngineeringCollegePage() {
                                         src="/naac.png"
                                         alt="NAAC A Grade"
                                         width={60}
-                                        height={20}
-                                        className="h-5 w-auto object-contain"
+                                        height={60} 
+                                        className="h-14 w-auto object-contain"
                                     />
                                 </div>
                                 <div className="flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2">

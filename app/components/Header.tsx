@@ -172,7 +172,7 @@ export default function Header() {
                                         alt="NAAC A Grade"
                                         width={120}
                                         height={40}
-                                        className="h-10 w-auto object-contain"
+                                        className="h-14 w-auto object-contain"
                                     />
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ export default function Header() {
                                         alt="NBA Accredited"
                                         width={120}
                                         height={40}
-                                        className="h-10 w-auto object-contain"
+                                        className="h-14 w-auto object-contain"
                                     />
                                 </div>
                                 <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
@@ -254,7 +254,7 @@ export default function Header() {
                                             alt="NAAC A Grade"
                                             width={120}
                                             height={40}
-                                            className="h-10 w-auto object-contain"
+                                            className="h-14 w-auto object-contain"
                                         />
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -263,7 +263,7 @@ export default function Header() {
                                             alt="NBA Accredited"
                                             width={120}
                                             height={40}
-                                            className="h-10 w-auto object-contain"
+                                            className="h-14 w-auto object-contain"
                                         />
                                     </div>
 
