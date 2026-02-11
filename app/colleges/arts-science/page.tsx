@@ -109,12 +109,17 @@ const placementStats = {
 };
 
 const recruiters = [
-    { name: 'TCS' },
-    { name: 'Infosys' },
-    { name: 'CTS' },
-    { name: 'Wipro' },
-    { name: 'HDFC Bank' },
-    { name: 'ICICI Bank' },
+    { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
+    { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
+
+    { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
+    // { name: 'HDFC Bank', logo: 'https://cdn.simpleicons.org/hdfc/white' },
+    // { name: 'ICICI Bank', logo: 'https://cdn.simpleicons.org/icici/white' },
+    { name: 'SAP', logo: 'https://cdn.simpleicons.org/sap/white' },
+    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
+    { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
+    { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
+    // { name: 'Microsoft', logo: 'https://cdn.simpleicons.org/microsoft/white' }
 ];
 
 export default function ArtsScienceCollegePage() {

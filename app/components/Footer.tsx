@@ -116,7 +116,7 @@ export default function Footer() {
                                 </div>
                             </Link>
                             <p className="text-white/60 leading-relaxed text-sm max-w-sm">
-                                Premier educational trust dedicated to providing world-class technical and professional education since 2008.
+                                Premier educational trust dedicated to providing world-class technical and professional education since 2009.
                             </p>
                             <div className="flex items-center gap-2">
                                 {socialLinks.map((social) => (

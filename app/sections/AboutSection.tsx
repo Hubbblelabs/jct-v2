@@ -64,7 +64,7 @@ export default function AboutSection() {
                     {/* Left Content */}
                     <div className="lg:order-1">
                         <p className="text-neutral-600 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-                            Since 2008, our commitment to academic excellence, industry-relevant curriculum,
+                            Since 2009, our commitment to academic excellence, industry-relevant curriculum,
                             and holistic development has made us a trusted name in higher education.
                             With state-of-the-art infrastructure and experienced faculty, we prepare
                             our students not just for careers, but for life.

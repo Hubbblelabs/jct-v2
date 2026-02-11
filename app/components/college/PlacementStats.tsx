@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 interface PlacementStatsProps {
     stats: {
@@ -74,6 +75,32 @@ function parseStatNumber(stat: string): number {
 function getStatSuffix(stat: string): string {
     return stat.replace(/[\d.]+/, '');
 }
+
+// Recruiter Logo component with error handling
+const RecruiterLogo = ({ recruiter }: { recruiter: { name: string; logo?: string } }) => {
+    const [imgError, setImgError] = useState(false);
+
+    if (recruiter.logo && !imgError) {
+        return (
+            <div className="relative w-full h-full p-3">
+                <Image
+                    src={recruiter.logo}
+                    alt={recruiter.name}
+                    fill
+                    className="object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                    sizes="(max-width: 768px) 128px, 160px"
+                    onError={() => setImgError(true)}
+                />
+            </div>
+        );
+    }
+
+    return (
+        <span className="text-white/70 text-sm font-medium text-center px-3 group-hover:text-white transition-colors">
+            {recruiter.name}
+        </span>
+    );
+};
 
 export default function PlacementStats({ stats, recruiters }: PlacementStatsProps) {
     const placementNum = parseStatNumber(stats.placementRate);
@@ -155,17 +182,7 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
                                     key={`first-${recruiter.name}-${index}`}
                                     className="group flex-shrink-0 w-32 md:w-40 h-16 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 mx-3"
                                 >
-                                    {recruiter.logo ? (
-                                        <img
-                                            src={recruiter.logo}
-                                            alt={recruiter.name}
-                                            className="max-w-full max-h-full p-3 opacity-70 group-hover:opacity-100 transition-opacity"
-                                        />
-                                    ) : (
-                                        <span className="text-white/70 text-sm font-medium text-center px-3 group-hover:text-white transition-colors">
-                                            {recruiter.name}
-                                        </span>
-                                    )}
+                                    <RecruiterLogo recruiter={recruiter} />
                                 </div>
                             ))}
                             {/* Duplicate set for seamless loop */}
@@ -174,17 +191,7 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
                                     key={`second-${recruiter.name}-${index}`}
                                     className="group flex-shrink-0 w-32 md:w-40 h-16 md:h-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 mx-3"
                                 >
-                                    {recruiter.logo ? (
-                                        <img
-                                            src={recruiter.logo}
-                                            alt={recruiter.name}
-                                            className="max-w-full max-h-full p-3 opacity-70 group-hover:opacity-100 transition-opacity"
-                                        />
-                                    ) : (
-                                        <span className="text-white/70 text-sm font-medium text-center px-3 group-hover:text-white transition-colors">
-                                            {recruiter.name}
-                                        </span>
-                                    )}
+                                    <RecruiterLogo recruiter={recruiter} />
                                 </div>
                             ))}
                         </div>

@@ -38,7 +38,7 @@ export default function HeroSection() {
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-white/10 mb-8 animate-fade-in-up">
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                     <span className="text-sm font-medium text-white/90 tracking-wide uppercase">
-                        Estd. 2008 | Coimbatore
+                        Estd. 2009 | Coimbatore
                     </span>
                 </div>
 

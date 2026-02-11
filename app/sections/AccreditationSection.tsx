@@ -3,8 +3,8 @@
 import React from 'react';
 
 const accreditations = [
-    { name: 'NAAC', grade: 'A', description: 'National Assessment and Accreditation Council' },
-    { name: 'NBA', grade: 'Accredited', description: 'National Board of Accreditation' },
+    { name: 'NAAC', grade: 'A', description: 'National Assessment and Accreditation Council', image: '/naac.png' },
+    { name: 'NBA', grade: 'Accredited', description: 'National Board of Accreditation', image: '/nba.png' },
     { name: 'AICTE', grade: 'Approved', description: 'All India Council for Technical Education' },
     { name: 'UGC', grade: 'Recognized', description: 'University Grants Commission' },
 ];
@@ -52,8 +52,16 @@ export default function AccreditationSection() {
                             className="card-dark rounded-2xl p-6 text-center group hover:bg-white/10 transition-all duration-300"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                <span className="text-xl font-bold text-primary-dark">{accreditation.grade}</span>
+                            <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden bg-white">
+                                {accreditation.image ? (
+                                    <img
+                                        src={accreditation.image}
+                                        alt={accreditation.name}
+                                        className="w-full h-full object-contain p-2"
+                                    />
+                                ) : (
+                                    <span className="text-xl font-bold text-primary-dark">{accreditation.grade}</span>
+                                )}
                             </div>
                             <h4 className="text-xl font-bold !text-white mb-2">{accreditation.name}</h4>
                             <p className="!text-white/60 text-sm">{accreditation.description}</p>

@@ -35,7 +35,7 @@ const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Admissions', href: '/admissions' },
     { name: 'Placements', href: '/placements' },
-    { name: 'Contact', href: '/contact' },
+    // { name: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
@@ -164,10 +164,30 @@ export default function Header() {
                             <span>+91 93614 88801</span>
                         </a>
 
-                        <div className="hidden lg:block">
-                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
-                                Apply Now
-                            </Link>
+                        <div className="hidden lg:flex items-center gap-4">
+                            <div className="flex items-center gap-3 mr-2">
+                                <div className="flex items-center gap-2">
+                                    <Image
+                                        src="/naac.png"
+                                        alt="NAAC A Grade"
+                                        width={120}
+                                        height={40}
+                                        className="h-10 w-auto object-contain"
+                                    />
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Image
+                                        src="/nba.png"
+                                        alt="NBA Accredited"
+                                        width={120}
+                                        height={40}
+                                        className="h-10 w-auto object-contain"
+                                    />
+                                </div>
+                                <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
+                                    Apply Now
+                                </Link>
+                            </div>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -179,58 +199,79 @@ export default function Header() {
                             {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                         </button>
                     </div>
-                </div>
 
-                {/* Mobile Menu Overlay */}
-                <div className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-neutral-100 transition-all duration-300 origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
-                    }`}>
-                    <div className="p-4 space-y-2 max-h-[80vh] overflow-y-auto">
-                        {colleges.map((college) => (
-                            <Link
-                                key={college.name}
-                                href={college.href}
-                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                    {college.icon}
-                                </div>
-                                <div>
-                                    <span className="font-medium text-sm sm:text-base">{college.shortName}</span>
-                                    {college.tag && (
-                                        <span className="ml-2 badge badge-primary text-[10px] sm:text-xs">{college.tag}</span>
-                                    )}
-                                </div>
-                            </Link>
-                        ))}
-                        <div className="pt-2 border-t border-neutral-100 mt-2">
-                            {quickLinks.map((link) => (
+                    {/* Mobile Menu Overlay */}
+                    <div className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-neutral-100 transition-all duration-300 origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
+                        }`}>
+                        <div className="p-4 space-y-2 max-h-[80vh] overflow-y-auto">
+                            {colleges.map((college) => (
                                 <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="block p-3 text-neutral-700 hover:text-primary font-medium"
+                                    key={college.name}
+                                    href={college.href}
+                                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    {link.name}
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                        {college.icon}
+                                    </div>
+                                    <div>
+                                        <span className="font-medium text-sm sm:text-base">{college.shortName}</span>
+                                        {college.tag && (
+                                            <span className="ml-2 badge badge-primary text-[10px] sm:text-xs">{college.tag}</span>
+                                        )}
+                                    </div>
                                 </Link>
                             ))}
-                        </div>
-                        <div className="pt-2 border-t border-neutral-100 mt-2">
-                            <a
-                                href="tel:+919361488801"
-                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50 text-neutral-700 hover:text-primary transition-colors"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                                    <PhoneIcon className="w-5 h-5" />
+                            <div className="pt-2 border-t border-neutral-100 mt-2">
+                                {quickLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className="block p-3 text-neutral-700 hover:text-primary font-medium"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </div>
+                            <div className="pt-2 border-t border-neutral-100 mt-2">
+                                <a
+                                    href="tel:+919361488801"
+                                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50 text-neutral-700 hover:text-primary transition-colors"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                        <PhoneIcon className="w-5 h-5" />
+                                    </div>
+                                    <span className="font-medium">+91 93614 88801</span>
+                                </a>
+                            </div>
+                            <div className="pt-4 pb-2 px-3">
+                                <div className="flex items-center gap-3 mb-4 justify-center">
+                                    <div className="flex items-center gap-2">
+                                        <Image
+                                            src="/naac.png"
+                                            alt="NAAC A Grade"
+                                            width={120}
+                                            height={40}
+                                            className="h-10 w-auto object-contain"
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <Image
+                                            src="/nba.png"
+                                            alt="NBA Accredited"
+                                            width={120}
+                                            height={40}
+                                            className="h-10 w-auto object-contain"
+                                        />
+                                    </div>
+
+                                    <Link href="https://admissions.jct.ac.in/" className="btn btn-primary w-full justify-center">
+                                        Apply Now
+                                    </Link>
                                 </div>
-                                <span className="font-medium">+91 93614 88801</span>
-                            </a>
-                        </div>
-                        <div className="pt-4 pb-2">
-                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary w-full justify-center">
-                                Apply Now
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -109,12 +109,13 @@ const placementStats = {
 };
 
 const recruiters = [
-    { name: 'L&T' },
-    { name: 'Ashok Leyland' },
-    { name: 'TVS' },
-    { name: 'TAFE' },
-    { name: 'Roots Industries' },
-    { name: 'ELGI Equipments' },
+    { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
+  { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
+  { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
+    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
+    { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
+    { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
+    // { name: 'Microsoft', logo: 'https://cdn.simpleicons.org/microsoft/white' }
 ];
 
 export default function PolytechnicCollegePage() {

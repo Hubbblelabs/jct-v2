@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import CollegeHero from '../../components/college/CollegeHero';
 import {
@@ -117,14 +118,23 @@ const placementStats = {
 };
 
 const recruiters = [
-    { name: 'TCS' },
-    { name: 'Infosys' },
-    { name: 'Wipro' },
-    { name: 'Cognizant' },
-    { name: 'HCL' },
-    { name: 'Tech Mahindra' },
-    { name: 'Zoho' },
-    { name: 'Amazon' },
+ 
+  { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
+  { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
+  { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
+//   { name: 'Cognizant', logo: 'https://cdn.simpleicons.org/cognizant/white' },
+  { name: 'HCL', logo: 'https://cdn.simpleicons.org/hcl/white' },
+    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
+  { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
+  { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
+//   { name: 'Tech Mahindra', logo: 'https://cdn.simpleicons.org/techmahindra/white' },
+//   { name: 'IBM', logo: 'https://cdn.simpleicons.org/ibm/white' },
+  { name: 'Accenture', logo: 'https://cdn.simpleicons.org/accenture/white' },
+//   { name: 'Capgemini', logo: 'https://cdn.simpleicons.org/capgemini/white' },
+//   { name: 'Deloitte', logo: 'https://cdn.simpleicons.org/deloitte/white' },
+//   { name: 'Oracle', logo: 'https://cdn.simpleicons.org/oracle/white' },
+  { name: 'SAP', logo: 'https://cdn.simpleicons.org/sap/white' },
+
 ];
 
 export default function EngineeringCollegePage() {
@@ -163,7 +173,7 @@ export default function EngineeringCollegePage() {
                                 Shaping Future <span className="text-gradient">Engineers</span>
                             </h2>
                             <p className="text-neutral-600 text-lg leading-relaxed mb-6">
-                                JCT College of Engineering & Technology, established in 2008, is an
+                                JCT College of Engineering & Technology, established in 2009, is an
                                 autonomous institution affiliated to Anna University. We are committed
                                 to providing quality technical education that meets global standards.
                             </p>
@@ -174,12 +184,22 @@ export default function EngineeringCollegePage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <div className="flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2">
-                                    <span className="w-2 h-2 bg-accent rounded-full" />
-                                    <span className="text-sm font-medium text-primary">NAAC &apos;A&apos; Grade</span>
+                                    <Image
+                                        src="/naac.png"
+                                        alt="NAAC A Grade"
+                                        width={60}
+                                        height={20}
+                                        className="h-5 w-auto object-contain"
+                                    />
                                 </div>
                                 <div className="flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2">
-                                    <span className="w-2 h-2 bg-accent rounded-full" />
-                                    <span className="text-sm font-medium text-primary">NBA Accredited</span>
+                                    <Image
+                                        src="/nba.png"
+                                        alt="NBA Accredited"
+                                        width={60}
+                                        height={20}
+                                        className="h-5 w-auto object-contain"
+                                    />
                                 </div>
                                 <div className="flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2">
                                     <span className="w-2 h-2 bg-accent rounded-full" />
@@ -201,7 +221,7 @@ export default function EngineeringCollegePage() {
                                     </div>
                                     <div>
                                         <div className="text-sm text-neutral-500">Since</div>
-                                        <div className="text-2xl font-bold text-primary">2008</div>
+                                        <div className="text-2xl font-bold text-primary">2009</div>
                                     </div>
                                 </div>
                             </div>
