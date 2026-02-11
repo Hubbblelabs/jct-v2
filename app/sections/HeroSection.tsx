@@ -10,7 +10,7 @@ const stats = [
     { value: '7000+', label: 'Graduates' },
     { value: '100%', label: 'Placement Support' },
     // { value: 'NAAC A', label: 'Accreditation' },
-    {value:'8000+',label:'Scholarships'}
+    { value: '8000+', label: 'Scholarships' }
 ];
 
 export default function HeroSection() {
@@ -19,16 +19,16 @@ export default function HeroSection() {
             {/* Background Image with Zoom Effect */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/hero-campus.jpg"
+                    src="/images/hero-campus-blue.jpg"
                     alt="JCT Campus"
                     fill
                     priority
                     className="object-cover animate-zoom-slow"
                     quality={90}
                 />
-                {/* Cinema-style Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/60 to-neutral-950/90" />
-                <div className="absolute inset-0 bg-neutral-950/40" /> {/* Extra tint for text readability */}
+                {/* Cinema-style Overlay with Blue Tint */}
+                <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/80 via-primary-dark/60 to-primary-dark/90 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-blue-950/40" /> {/* Extra blue tint */}
             </div>
 
             {/* Content Container */}
@@ -80,7 +80,7 @@ export default function HeroSection() {
             </div>
 
             {/* Glass Stats Bar */}
-            <div className="relative z-20 w-full border-t border-white/10 bg-neutral-950/40 backdrop-blur-xl animate-fade-in-up delay-500 mt-auto">
+            <div className="relative z-20 w-full border-t border-white/10 bg-primary opacity-50 backdrop-blur-xl animate-fade-in-up delay-500 mt-auto">
                 <div className="container">
                     <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
                         {stats.map((stat, index) => (
