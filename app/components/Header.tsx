@@ -64,15 +64,14 @@ export default function Header() {
                 }`}>
             <div className="container relative">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 sm:gap-3 group z-50 relative">
-                        <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
+                        <div className="relative w-10 h-10 sm:w-15 sm:h-12 flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
                             <Image
-                                src="/jct_logo.svg"
+                                src="/jct_logo.png"
                                 alt="JCT Logo"
                                 width={190}
-                                height={48}
-                                className="w-full h-full object-contain"
+                                height={100}
+                                // className="w-full h-full object-contain"
                             />
                         </div>
                         <div className="block">
