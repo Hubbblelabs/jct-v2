@@ -117,24 +117,18 @@ const placementStats = {
     companiesVisited: '65+',
 };
 
-const recruiters = [
- 
-  { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
-  { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
-  { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
-//   { name: 'Cognizant', logo: 'https://cdn.simpleicons.org/cognizant/white' },
-  { name: 'HCL', logo: 'https://cdn.simpleicons.org/hcl/white' },
-    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
-  { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
-  { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
-//   { name: 'Tech Mahindra', logo: 'https://cdn.simpleicons.org/techmahindra/white' },
-//   { name: 'IBM', logo: 'https://cdn.simpleicons.org/ibm/white' },
-  { name: 'Accenture', logo: 'https://cdn.simpleicons.org/accenture/white' },
-//   { name: 'Capgemini', logo: 'https://cdn.simpleicons.org/capgemini/white' },
-//   { name: 'Deloitte', logo: 'https://cdn.simpleicons.org/deloitte/white' },
-//   { name: 'Oracle', logo: 'https://cdn.simpleicons.org/oracle/white' },
-  { name: 'SAP', logo: 'https://cdn.simpleicons.org/sap/white' },
+import { SiTcs, SiInfosys, SiWipro, SiHcl, SiCisco, SiDell, SiHp, SiAccenture, SiSap } from 'react-icons/si';
 
+const recruiters = [
+    { name: 'TCS', icon: <SiTcs className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Infosys', icon: <SiInfosys className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Wipro', icon: <SiWipro className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'HCL', icon: <SiHcl className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Cisco', icon: <SiCisco className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Dell', icon: <SiDell className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'HP', icon: <SiHp className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Accenture', icon: <SiAccenture className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'SAP', icon: <SiSap className="w-8 h-8 md:w-10 md:h-10" /> },
 ];
 
 export default function EngineeringCollegePage() {

@@ -108,18 +108,16 @@ const placementStats = {
     companiesVisited: '40+',
 };
 
-const recruiters = [
-    { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
-    { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
+import { SiTcs, SiInfosys, SiWipro, SiSap, SiCisco, SiDell, SiHp } from 'react-icons/si';
 
-    { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
-    // { name: 'HDFC Bank', logo: 'https://cdn.simpleicons.org/hdfc/white' },
-    // { name: 'ICICI Bank', logo: 'https://cdn.simpleicons.org/icici/white' },
-    { name: 'SAP', logo: 'https://cdn.simpleicons.org/sap/white' },
-    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
-    { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
-    { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
-    // { name: 'Microsoft', logo: 'https://cdn.simpleicons.org/microsoft/white' }
+const recruiters = [
+    { name: 'TCS', icon: <SiTcs className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Infosys', icon: <SiInfosys className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Wipro', icon: <SiWipro className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'SAP', icon: <SiSap className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Cisco', icon: <SiCisco className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Dell', icon: <SiDell className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'HP', icon: <SiHp className="w-8 h-8 md:w-10 md:h-10" /> },
 ];
 
 export default function ArtsScienceCollegePage() {

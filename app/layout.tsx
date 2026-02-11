@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body className="antialiased font-body overflow-x-hidden">
         {children}
         <FloatingActions />

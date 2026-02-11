@@ -108,14 +108,15 @@ const placementStats = {
     companiesVisited: '35+',
 };
 
+import { SiTcs, SiInfosys, SiWipro, SiCisco, SiDell, SiHp } from 'react-icons/si';
+
 const recruiters = [
-    { name: 'TCS', logo: 'https://cdn.simpleicons.org/tcs/white' },
-  { name: 'Infosys', logo: 'https://cdn.simpleicons.org/infosys/white' },
-  { name: 'Wipro', logo: 'https://cdn.simpleicons.org/wipro/white' },
-    { name: 'Cisco', logo: 'https://cdn.simpleicons.org/cisco/white' },
-    { name: 'Dell', logo: 'https://cdn.simpleicons.org/dell/white' },
-    { name: 'HP', logo: 'https://cdn.simpleicons.org/hp/white' },
-    // { name: 'Microsoft', logo: 'https://cdn.simpleicons.org/microsoft/white' }
+    { name: 'TCS', icon: <SiTcs className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Infosys', icon: <SiInfosys className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Wipro', icon: <SiWipro className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Cisco', icon: <SiCisco className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'Dell', icon: <SiDell className="w-8 h-8 md:w-10 md:h-10" /> },
+    { name: 'HP', icon: <SiHp className="w-8 h-8 md:w-10 md:h-10" /> },
 ];
 
 export default function PolytechnicCollegePage() {

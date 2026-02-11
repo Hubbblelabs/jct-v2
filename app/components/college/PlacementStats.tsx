@@ -10,7 +10,7 @@ interface PlacementStatsProps {
         highestPackage: string;
         companiesVisited: string;
     };
-    recruiters: Array<{ name: string; logo?: string }>;
+    recruiters: Array<{ name: string; logo?: string; icon?: React.ReactNode }>;
 }
 
 // Animated counter hook
@@ -77,8 +77,16 @@ function getStatSuffix(stat: string): string {
 }
 
 // Recruiter Logo component with error handling
-const RecruiterLogo = ({ recruiter }: { recruiter: { name: string; logo?: string } }) => {
+const RecruiterLogo = ({ recruiter }: { recruiter: { name: string; logo?: string; icon?: React.ReactNode } }) => {
     const [imgError, setImgError] = useState(false);
+
+    if (recruiter.icon) {
+        return (
+            <div className="text-white/80 hover:text-white transition-colors">
+                {recruiter.icon}
+            </div>
+        );
+    }
 
     if (recruiter.logo && !imgError) {
         return (
