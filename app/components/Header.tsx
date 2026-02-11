@@ -62,11 +62,11 @@ export default function Header() {
                 ? 'bg-white/95 backdrop-blur-lg shadow-lg py-2'
                 : 'bg-white py-3'
                 }`}>
-            <div className="container">
+            <div className="container relative">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+                    <Link href="/" className="flex items-center gap-2 sm:gap-3 group z-50 relative">
+                        <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
                             <Image
                                 src="/jct_logo.svg"
                                 alt="JCT Logo"
@@ -75,13 +75,13 @@ export default function Header() {
                                 className="w-full h-full object-contain"
                             />
                         </div>
-                        <div className="hidden sm:block">
-                            <div className="font-bold text-primary text-lg leading-tight">
+                        <div className="block">
+                            <div className="font-bold text-primary text-sm sm:text-lg leading-tight max-w-[200px] sm:max-w-none">
                                 {isEngineering ? 'JCT College of Engineering & Technology' :
                                     isArtsScience ? 'JCT College of Arts & Science' :
                                         isPolytechnic ? 'JCT Polytechnic College' : 'JCT Institutions'}
                             </div>
-                            <div className="text-xs text-neutral-500">Excellence in Education</div>
+                            <div className="text-[10px] sm:text-xs text-neutral-500">Excellence in Education</div>
                         </div>
                     </Link>
 
@@ -143,7 +143,7 @@ export default function Header() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="px-4 py-2 rounded-lg text-neutral-700 hover:text-primary hover:bg-primary/5 transition-colors font-medium"
+                                className="px-4 py-2 rounded-lg text-neutral-700 hover:text-primary hover:bg-primary/5 transition-colors font-medium whitespace-nowrap"
                             >
                                 {link.name}
                             </Link>
@@ -152,62 +152,78 @@ export default function Header() {
 
                     {/* CTA & Mobile Menu */}
                     <div className="flex items-center gap-3">
-                        <Link href="https://admissions.jct.ac.in/" className="hidden sm:inline-flex btn btn-primary">
+                        <a href="tel:+919361488801" className="hidden xl:flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-primary transition-colors mr-2 whitespace-nowrap">
+                            <PhoneIcon className="w-4 h-4" />
+                            <span>+91 93614 88801</span>
+                        </a>
+                        <Link href="https://admissions.jct.ac.in/" className="hidden md:inline-flex btn btn-primary">
                             Apply Now
                         </Link>
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="lg:hidden w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center"
+                            className="lg:hidden w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center z-50 relative"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                         </button>
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <div className="lg:hidden mt-4 py-4 border-t border-neutral-100 max-h-[85vh] overflow-y-auto">
-                        <div className="space-y-2">
-                            {colleges.map((college) => (
+                {/* Mobile Menu Overlay */}
+                <div className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-neutral-100 transition-all duration-300 origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
+                    }`}>
+                    <div className="p-4 space-y-2 max-h-[80vh] overflow-y-auto">
+                        {colleges.map((college) => (
+                            <Link
+                                key={college.name}
+                                href={college.href}
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    {college.icon}
+                                </div>
+                                <div>
+                                    <span className="font-medium text-sm sm:text-base">{college.shortName}</span>
+                                    {college.tag && (
+                                        <span className="ml-2 badge badge-primary text-[10px] sm:text-xs">{college.tag}</span>
+                                    )}
+                                </div>
+                            </Link>
+                        ))}
+                        <div className="pt-2 border-t border-neutral-100 mt-2">
+                            {quickLinks.map((link) => (
                                 <Link
-                                    key={college.name}
-                                    href={college.href}
-                                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50"
+                                    key={link.name}
+                                    href={link.href}
+                                    className="block p-3 text-neutral-700 hover:text-primary font-medium"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                                        {college.icon}
-                                    </div>
-                                    <div>
-                                        <span className="font-medium">{college.shortName}</span>
-                                        {college.tag && (
-                                            <span className="ml-2 badge badge-primary text-xs">{college.tag}</span>
-                                        )}
-                                    </div>
+                                    {link.name}
                                 </Link>
                             ))}
-                            <div className="pt-2 border-t border-neutral-100 mt-2">
-                                {quickLinks.map((link) => (
-                                    <Link
-                                        key={link.name}
-                                        href={link.href}
-                                        className="block p-3 text-neutral-700 hover:text-primary"
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                ))}
-                            </div>
-                            <div className="pt-4">
-                                <Link href="https://admissions.jct.ac.in/" className="btn btn-primary w-full justify-center">
-                                    Apply Now
-                                </Link>
-                            </div>
+                        </div>
+                        <div className="pt-2 border-t border-neutral-100 mt-2">
+                            <a
+                                href="tel:+919361488801"
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-50 text-neutral-700 hover:text-primary transition-colors"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <PhoneIcon className="w-5 h-5" />
+                                </div>
+                                <span className="font-medium">+91 93614 88801</span>
+                            </a>
+                        </div>
+                        <div className="pt-4 pb-2">
+                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary w-full justify-center">
+                                Apply Now
+                            </Link>
                         </div>
                     </div>
-                )}
+                </div>
             </div>
         </header>
     );
@@ -267,6 +283,14 @@ function CloseIcon() {
     return (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    );
+}
+
+function PhoneIcon({ className }: { className?: string }) {
+    return (
+        <svg className={`w-5 h-5 ${className}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
     );
 }

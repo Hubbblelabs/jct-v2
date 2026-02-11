@@ -87,7 +87,8 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
     const companies = useCountUp(companiesNum, 2000);
 
     return (
-        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark via-neutral-900 to-primary-dark overflow-hidden" id="placements">
+        // <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark via-neutral-900 to-primary-dark overflow-hidden" id="placements">
+        <section className="relative py-20 md:py-28  bg-primary-dark overflow-hidden" id="placements">
             {/* Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 decoration-dots opacity-[0.03]" />

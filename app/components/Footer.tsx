@@ -52,7 +52,7 @@ export default function Footer() {
     return (
         <footer
             data-theme={isArtsScience ? 'arts-science' : isPolytechnic ? 'polytechnic' : undefined}
-            className="bg-neutral-950 text-white relative overflow-hidden pt-16 md:pt-20"
+            className="bg-[#021a60] text-white relative overflow-hidden pt-16 md:pt-20"
         >
             {/* Decorative Elements */}
             <div className="absolute inset-0 decoration-dots opacity-[0.03]" />
@@ -104,7 +104,7 @@ export default function Footer() {
                                         alt="JCT Logo"
                                         width={48}
                                         height={48}
-                                        className="w-full h-full object-contain brightness-100 invert"
+                                        className="w-full h-full object-contain brightness-100"
                                     />
                                 </div>
                                 <div>
@@ -224,7 +224,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/10 bg-neutral-950">
+            <div className="border-t border-white/10 bg-[#021a60]">
                 <div className="container py-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-white/40 text-xs md:text-sm text-center md:text-left">

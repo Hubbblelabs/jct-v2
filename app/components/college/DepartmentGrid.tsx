@@ -25,7 +25,7 @@ export default function DepartmentGrid({
     subtitle = "Explore our academic departments"
 }: DepartmentGridProps) {
     return (
-        <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark to-neutral-950 overflow-hidden" id="programs">
+        <section className="relative py-20 md:py-28 bg-primary overflow-hidden" id="programs">
             {/* Decorative Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 decoration-dots opacity-[0.03]" />
@@ -60,7 +60,7 @@ export default function DepartmentGrid({
                             {/* Background Image */}
                             {dept.image && (
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                                    className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-30 transition-opacity duration-500"
                                     style={{ backgroundImage: `url('${dept.image}')` }}
                                 />
                             )}
