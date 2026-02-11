@@ -19,12 +19,12 @@ export default function HeroSection() {
             {/* Background Image with Zoom Effect */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/hero-campus-blue.jpg"
+                    src="/images/hero-campus.jpg"
                     alt="JCT Campus"
                     fill
                     priority
                     className="object-cover animate-zoom-slow"
-                    quality={90}
+                    quality={75}
                 />
                 {/* Cinema-style Overlay with Blue Tint */}
                 <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/80 via-primary-dark/60 to-primary-dark/90 mix-blend-multiply" />

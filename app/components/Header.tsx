@@ -152,13 +152,23 @@ export default function Header() {
 
                     {/* CTA & Mobile Menu */}
                     <div className="flex items-center gap-3">
-                        <a href="tel:+919361488801" className="hidden xl:flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-primary transition-colors mr-2 whitespace-nowrap">
+                        {/* Phone Number - Visible on Mobile/Tablet */}
+                        <a href="tel:+919361488801" className="flex lg:hidden items-center gap-2 text-sm font-medium text-neutral-600 hover:text-primary transition-colors mr-2 whitespace-nowrap">
                             <PhoneIcon className="w-4 h-4" />
                             <span>+91 93614 88801</span>
                         </a>
-                        <Link href="https://admissions.jct.ac.in/" className="hidden md:inline-flex btn btn-primary">
-                            Apply Now
-                        </Link>
+
+                        {/* Phone Number - Desktop (LG+) */}
+                        <a href="tel:+919361488801" className="hidden lg:flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-primary transition-colors mr-2 whitespace-nowrap">
+                            <PhoneIcon className="w-4 h-4" />
+                            <span>+91 93614 88801</span>
+                        </a>
+
+                        <div className="hidden lg:block">
+                            <Link href="https://admissions.jct.ac.in/" className="btn btn-primary">
+                                Apply Now
+                            </Link>
+                        </div>
 
                         {/* Mobile Menu Button */}
                         <button

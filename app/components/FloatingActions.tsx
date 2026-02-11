@@ -28,8 +28,8 @@ export default function FloatingActions() {
                 <button
                     onClick={() => setIsChatOpen(!isChatOpen)}
                     className={`flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer ${isChatOpen
-                            ? 'bg-neutral-800 text-white rotate-90'
-                            : 'bg-primary text-white hover:shadow-primary/40'
+                        ? 'bg-neutral-800 text-white rotate-90'
+                        : 'bg-primary text-white hover:shadow-primary/40'
                         }`}
                     aria-label="Open AI Chat"
                 >
