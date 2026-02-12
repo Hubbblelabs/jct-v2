@@ -12,6 +12,7 @@ const RecruitersSection = dynamic(() => import('./sections/RecruitersSection'), 
 const VideoGallerySection = dynamic(() => import('./sections/VideoGallerySection'), { ssr: true });
 const VisitFutureSection = dynamic(() => import('./sections/VisitFutureSection'), { ssr: true });
 const AccreditationSection = dynamic(() => import('./sections/AccreditationSection'), { ssr: true });
+const StatsSection = dynamic(() => import('./sections/StatsSection'), { ssr: true });
 
 export default function Home() {
   return (
@@ -23,10 +24,13 @@ export default function Home() {
       <main>
         {/* 1. Hero Section */}
         <HeroSection />
- 
+
         {/* 1.5. Accreditation Section */}
-        {/* <AccreditationSection /> */} 
-        
+        {/* <AccreditationSection /> */}
+
+        {/* 1.6. Stats Section */}
+        {/* <StatsSection /> */}
+
         {/* 2. About JCT Institutions */}
         <AboutSection />
 

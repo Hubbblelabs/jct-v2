@@ -108,17 +108,7 @@ const placementStats = {
     companiesVisited: '40+',
 };
 
-import { SiTcs, SiInfosys, SiWipro, SiSap, SiCisco, SiDell, SiHp } from 'react-icons/si';
-
-const recruiters = [
-    { name: 'TCS', icon: <SiTcs className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'Infosys', icon: <SiInfosys className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'Wipro', icon: <SiWipro className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'SAP', icon: <SiSap className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'Cisco', icon: <SiCisco className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'Dell', icon: <SiDell className="w-8 h-8 md:w-10 md:h-10" /> },
-    { name: 'HP', icon: <SiHp className="w-8 h-8 md:w-10 md:h-10" /> },
-];
+import { recruiters } from '../../data/recruiters';
 
 export default function ArtsScienceCollegePage() {
     return (

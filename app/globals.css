@@ -1181,11 +1181,11 @@ button:focus-visible {
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 60s linear infinite;
   display: flex;
   width: max-content;
 }
 
-.pause-animation:hover {
+.pause-on-hover:hover {
   animation-play-state: paused;
 }

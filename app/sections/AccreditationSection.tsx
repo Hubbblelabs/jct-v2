@@ -49,7 +49,7 @@ const accreditations = [
 
 export default function AccreditationSection() {
     return (
-        <section className="py-8 bg-neutral-50 border-b border-neutral-200 overflow-hidden">
+        <section className="py-8 bg-primary border-b border-white/10 overflow-hidden">
             <div className="container-fluid">
                 <div className="flex animate-marquee hover:pause-animation items-center gap-16 pr-16">
                     {/* First Set */}
@@ -68,10 +68,10 @@ export default function AccreditationSection() {
                                 </div>
                             ) : (
                                 <div className="text-center w-48 flex flex-col items-center justify-center">
-                                    <div className="font-bold text-neutral-800 text-xl leading-tight">
+                                    <div className="font-bold text-white text-xl leading-tight">
                                         {item.name}
                                     </div>
-                                    <div className="text-sm text-neutral-500 leading-tight mt-1">
+                                    <div className="text-sm text-neutral-300 leading-tight mt-1">
                                         {item.fullForm}
                                     </div>
                                 </div>
@@ -95,10 +95,10 @@ export default function AccreditationSection() {
                                 </div>
                             ) : (
                                 <div className="text-center w-48 flex flex-col items-center justify-center">
-                                    <div className="font-bold text-neutral-800 text-xl leading-tight">
+                                    <div className="font-bold text-white text-xl leading-tight">
                                         {item.name}
                                     </div>
-                                    <div className="text-sm text-neutral-500 leading-tight mt-1">
+                                    <div className="text-sm text-neutral-300 leading-tight mt-1">
                                         {item.fullForm}
                                     </div>
                                 </div>

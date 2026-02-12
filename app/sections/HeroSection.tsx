@@ -4,14 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import AccreditationSection from './AccreditationSection';
+import StatsSection from './StatsSection';
 
-const stats = [
-    { value: '15+', label: 'Years of Excellence' },
-    { value: '7000+', label: 'Graduates' },
-    { value: '100%', label: 'Placement Support' },
-    // { value: 'NAAC A', label: 'Accreditation' },
-    { value: '8000+', label: 'Scholarships' }
-];
+
 
 export default function HeroSection() {
     return (
@@ -78,23 +75,9 @@ export default function HeroSection() {
                     </Link>
                 </div>
             </div>
-
-            {/* Glass Stats Bar */}
-            <div className="relative z-20 w-full border-t border-white/10 bg-primary opacity-50 backdrop-blur-xl animate-fade-in-up delay-500 mt-auto">
-                <div className="container">
-                    <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-                        {stats.map((stat, index) => (
-                            <div key={index} className="py-6 md:py-8 px-4 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-colors">
-                                <div className="text-2xl md:text-4xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                                    {stat.value}
-                                </div>
-                                <div className="text-xs md:text-sm font-medium text-white/60 uppercase tracking-wider group-hover:text-accent transition-colors">
-                                    {stat.label}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            <div className="relative z-10 w-full">
+            {/* <AccreditationSection /> */}
+                <StatsSection />
             </div>
         </section>
     );
