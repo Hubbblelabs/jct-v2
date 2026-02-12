@@ -27,7 +27,7 @@ export default function VisitFutureSection() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 md:px-4 py-1.5 md:py-2 mb-6 md:mb-8">
                         <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                        <span className="text-white/90 text-xs md:text-sm font-medium">Admissions Open 2024-25</span>
+                        <span className="text-white/90 text-xs md:text-sm font-medium">Admissions Open 2026-27</span>
                     </div>
 
                     {/* Heading */}
