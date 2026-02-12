@@ -91,17 +91,17 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
 
     return (
         // <section className="relative py-20 md:py-28 bg-gradient-to-b from-primary-dark via-neutral-900 to-primary-dark overflow-hidden" id="placements">
-        <section className="relative py-20 md:py-28  bg-primary-dark overflow-hidden" id="placements">
+        <section className="relative py-16 md:py-28 bg-primary-dark overflow-hidden" id="placements">
             {/* Background */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute inset-0 decoration-dots opacity-[0.03]" />
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px]" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2" />
             </div>
 
             <div className="container relative z-10">
                 {/* Section Header */}
-                <div className="text-center max-w-2xl mx-auto mb-14">
+                <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14 px-4">
                     <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-6">
                         <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                         <span className="text-white/80 text-sm font-medium">Career Success</span>
@@ -109,13 +109,13 @@ export default function PlacementStats({ stats, recruiters }: PlacementStatsProp
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold !text-white mb-4">
                         Placement <span className="text-gradient">Highlights</span>
                     </h2>
-                    <p className="text-white/60 text-lg">
+                    <p className="text-white/60 text-base md:text-lg">
                         Our students are placed in top companies across the globe
                     </p>
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16 px-4">
                     <div ref={placement.ref} className="group bg-gradient-to-br from-accent/20 to-accent/5 backdrop-blur-sm border border-accent/30 rounded-2xl p-6 md:p-8 text-center hover:border-accent/50 transition-all duration-300">
                         <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                             {placement.count}{getStatSuffix(stats.placementRate)}

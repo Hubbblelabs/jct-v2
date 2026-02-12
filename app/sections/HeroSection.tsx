@@ -14,7 +14,7 @@ export default function HeroSection() {
     return (
         <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
             {/* Background Image with Zoom Effect */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
                     src="/images/hero-campus.jpg"
                     alt="JCT Campus"
@@ -76,7 +76,7 @@ export default function HeroSection() {
                 </div>
             </div>
             <div className="relative z-10 w-full">
-            {/* <AccreditationSection /> */}
+                {/* <AccreditationSection /> */}
                 <StatsSection />
             </div>
         </section>

@@ -1189,3 +1189,12 @@ button:focus-visible {
 .pause-on-hover:hover {
   animation-play-state: paused;
 }
+
+/* Response Fixes */
+@media (max-width: 767px) {
+
+  /* Prevent collision between fixed bottom buttons and floating icons */
+  .fixed.bottom-8.right-8 {
+    bottom: 5rem !important;
+  }
+}

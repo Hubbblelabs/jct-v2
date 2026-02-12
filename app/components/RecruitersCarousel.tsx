@@ -60,12 +60,12 @@ export default function RecruitersCarousel({ recruiters }: RecruitersCarouselPro
                 {recruiters.map((recruiter, index) => (
                     <div
                         key={`first-${recruiter.name}-${index}`}
-                        className="group flex-shrink-0 w-36 md:w-48 h-28 md:h-36 rounded-3xl bg-white border border-neutral-200 flex flex-col items-center justify-center gap-3 hover:shadow-xl hover:border-accent/40 transition-all duration-300 mx-5 md:mx-6 p-6"
+                        className="group flex-shrink-0 w-28 sm:w-36 md:w-48 h-24 sm:h-28 md:h-36 rounded-2xl sm:rounded-3xl bg-white border border-neutral-200 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-xl hover:border-accent/40 transition-all duration-300 mx-4 md:mx-6 p-4 sm:p-6"
                     >
                         <div className="flex-1 flex items-center justify-center w-full relative">
                             <RecruiterLogo recruiter={recruiter} />
                         </div>
-                        <span className="text-[10px] md:text-sm font-bold text-neutral-400 uppercase tracking-widest group-hover:text-primary transition-colors">
+                        <span className="text-[9px] sm:text-[10px] md:text-sm font-bold text-neutral-400 uppercase tracking-widest group-hover:text-primary transition-colors">
                             {recruiter.name}
                         </span>
                     </div>
@@ -74,12 +74,12 @@ export default function RecruitersCarousel({ recruiters }: RecruitersCarouselPro
                 {recruiters.map((recruiter, index) => (
                     <div
                         key={`second-${recruiter.name}-${index}`}
-                        className="group flex-shrink-0 w-36 md:w-48 h-28 md:h-36 rounded-3xl bg-white border border-neutral-200 flex flex-col items-center justify-center gap-3 hover:shadow-xl hover:border-accent/40 transition-all duration-300 mx-5 md:mx-6 p-6"
+                        className="group flex-shrink-0 w-28 sm:w-36 md:w-48 h-24 sm:h-28 md:h-36 rounded-2xl sm:rounded-3xl bg-white border border-neutral-200 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-xl hover:border-accent/40 transition-all duration-300 mx-4 md:mx-6 p-4 sm:p-6"
                     >
                         <div className="flex-1 flex items-center justify-center w-full relative">
                             <RecruiterLogo recruiter={recruiter} />
                         </div>
-                        <span className="text-[10px] md:text-sm font-bold text-neutral-400 uppercase tracking-widest group-hover:text-primary transition-colors">
+                        <span className="text-[9px] sm:text-[10px] md:text-sm font-bold text-neutral-400 uppercase tracking-widest group-hover:text-primary transition-colors">
                             {recruiter.name}
                         </span>
                     </div>
